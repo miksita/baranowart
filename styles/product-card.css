@@ -1,0 +1,377 @@
+
+
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: var(--color-border);
+}
+
+.cart-item-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+    margin-right: 20px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cart-item-artist {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.cart-item-price {
+    font-weight: 600;
+    margin: 0 20px;
+    white-space: nowrap;
+}
+
+.btn-remove {
+    background-color: var(--color-bg-white);
+    color: var(--color-accent);
+    border: none;
+}
+
+
+
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border: var(--color-border);
+    border-radius: var(--border-radius-sm);
+}
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: border 0.3s;
+}
+
+@media (max-width: 767px) {
+
+    .thumbnail {
+        width: 60px;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: border 0.3s;
+    }
+
+    .thumbnails {
+        display: flex;
+        gap: 6px;
+    }
+
+}
+
+
+
+.btn-tab {
+    background-color: var(--color-bg-gray);
+    color: var(--color-text-primary);
+    border: var(--color-border);
+    border-radius: var(--border-radius-sm);
+}
+
+.btn-tab.active {
+    background-color: var(--color-accent);
+    border: var(--color-border-accent);
+    color: var(--color-text-button);
+    border-radius: var(--border-radius-sm);
+
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+.delivery-info-container,
+.artwork-info-container {
+    background-color: var(--color-bg-white);
+    border: var(--color-border);
+    border-radius: var(--border-radius-md);
+}
+
+.delivery-section,
+.artwork-section {
+    border-bottom: var(--color-border);
+}
+
+.delivery-section:last-child,
+.artwork-section:last-child {
+    border-bottom: none;
+}
+
+
+.artist-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: var(--color-border);
+    border-radius: var(--border-radius-md);
+
+}
+
+
+.artist-info-wrapper {
+    display: flex;
+    align-items: start;
+}
+
+.artist-avatar {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+}
+
+.artist-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+
+.favorite-btn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 24px;
+    height: 24px;
+    background: var(--color-bg-white);
+    border: var(--color-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.favorite-btn .bi-heart {
+    color: var(--color-text-button);
+    transition: all 0.2s;
+}
+
+.favorite-btn:hover {
+    color: var(--color-text-button);
+    background-color: var(--color-accent);
+    transition: all 0.2s;
+}
+
+
+
+/*  Другие работы художника */
+
+
+:root {
+    --color-header-footer: #005248;
+    --color-text-header-footer: #FFFFFF;
+
+    --color-accent: #A38256;
+    --color-accent-hover: #e4e4e4;
+    --color-bg-input: white;
+
+    --color-border: 1px solid #D2D2D2;
+    --color-border-accent: 1px solid #A38256;
+
+    --color-bg-gray: #fafafa;
+    --color-bg-white: #FFFFFF;
+
+    --color-text-primary: #717171;
+    --color-text-secondary: #444444;
+    --color-text-button: #252525;
+
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+
+}
+
+.section-bg-gray {
+    background-color: var(--color-bg-gray);
+    color: var(--color-text-primary);
+    width: 100%;
+}
+
+.art-card {
+    height: 100%;
+    color: var(--color-text-primary);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.square-img-container {
+    border-radius: var(--border-radius-sm);
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+}
+
+.square-img {
+    position: absolute;
+    border-radius: var(--border-radius-sm);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 0.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+    flex: 1;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-bg-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--color-border);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.favorite-btn:hover {
+    color: var(--color-text-button);
+    background-color: var(--color-accent);
+    border: var(--color-border-accent);
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    touch-action: pan-y;
+}
+
+.slider-wrapper {
+    position: relative;
+    padding: 0 50px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.slider.grabbing {
+    cursor: grabbing;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.slider-item {
+    flex: 0 0 100%;
+    padding: 0 8px;
+    box-sizing: border-box;
+    min-width: 0;
+    user-select: none;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-bg-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: var(--color-border);
+    z-index: 10;
+    opacity: 0.9;
+}
+
+.slider-arrow:hover {
+    background-color: var(--color-accent);
+    color: var(--color-text-button);
+    opacity: 1;
+}
+
+.slider-arrow-left {
+    left: 5px;
+}
+
+.slider-arrow-right {
+    right: 5px;
+}
+
+@media (min-width: 576px) {
+    .slider-item {
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .slider-item {
+        flex: 0 0 33.333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .slider-item {
+        flex: 0 0 25%;
+    }
+}
+
+
+
+/*  */
+

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/styles/components/header.css">
+    <link rel="stylesheet" href="/styles/components/path.css">
+    <link rel="stylesheet" href="/styles/components/footer.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/personal-panel.css">
+    <title></title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand text-white fw-semibold fs-5 d-none d-lg-block" href="#"
+                aria-label="Логотип галереи">Logo</a>
+            <a class="mobile-logo d-lg-none fs-5 fw-semibold" href="#" aria-label="Логотип галереи">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="d-flex d-lg-none align-items-center mobile-icons">
+                <a href="#" aria-label="Профиль"><i class="bi bi-person fs-5"></i></a>
+                <div class="nav-item dropdown mobile-language-dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="mobileLanguageDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="flag-icon flag-icon-ru" id="mobile-current-flag"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mobileLanguageDropdown">
+                        <li>
+                            <a class="dropdown-item language-option fs-6" href="#" data-flag="ru" data-lang="Русский">
+                                <span class="flag-icon flag-icon-ru"></span> Русский
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item language-option fs-6" href="#" data-flag="us" data-lang="English">
+                                <span class="flag-icon flag-icon-us"></span> English
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item language-option fs-6" href="#" data-flag="de" data-lang="Deutsch">
+                                <span class="flag-icon flag-icon-de"></span> Deutsch
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav class="collapse navbar-collapse" id="navbarContent">
+                <div class="mobile-header d-lg-none">
+                    <button class="btn-close btn-close-white" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-label="Закрыть"></button>
+                </div>
+
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fs-6" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6" href="#">О нас</a>
+                    </li>
+
+                    <li class="nav-item dropdown position-relative d-lg-block d-none">
+                        <a class="nav-link dropdown-toggle fs-6" href="#" id="paintingsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Картины
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-paintings" aria-labelledby="paintingsDropdown">
+                            <div class="d-flex flex-column flex-lg-row">
+                                <div class="dropdown-menu-column">
+                                    <span class="dropdown-menu-title fs-6">Стиль</span>
+                                    <a href="#" class="dropdown-menu-item fs-6">Абстрактный</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Восточное искусство</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Геометрическое искусство</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Духовное искусство</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Образный</a>
+                                    <a href="#" class="dropdown-menu-all fs-6">Все стили</a>
+                                </div>
+                                <div class="dropdown-menu-column">
+                                    <span class="dropdown-menu-title fs-6">Техника</span>
+                                    <a href="#" class="dropdown-menu-item fs-6">Акрил</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Акварель</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Масло</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Пастель</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Гуашь</a>
+                                    <a href="#" class="dropdown-menu-all fs-6">Все техники</a>
+                                </div>
+                                <div class="dropdown-menu-column">
+                                    <span class="dropdown-menu-title fs-6">Тема</span>
+                                    <a href="#" class="dropdown-menu-item fs-6">Абстрактный</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Геометрический</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Граффити</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Красочный</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Машина</a>
+                                    <a href="#" class="dropdown-menu-all fs-6">Все темы</a>
+                                </div>
+                                <div class="dropdown-menu-column">
+                                    <span class="dropdown-menu-title fs-6">Размер</span>
+                                    <a href="#" class="dropdown-menu-item fs-6">Маленький</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Средний</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Большой</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Очень большой</a>
+                                </div>
+                                <div class="dropdown-menu-column">
+                                    <span class="dropdown-menu-title fs-6">Стоимость (€)</span>
+                                    <a href="#" class="dropdown-menu-item fs-6">менее 100</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">1000 - 10000</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">10000 - 50000</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">50000 - 100000</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">более чем 100000</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link fs-6" href="#">Картины</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fs-6" href="#">Художники</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6" href="#">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6" href="#">Новости</a>
+                    </li>
+
+                    <li class="nav-item dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center fs-6" href="#"
+                            id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="flag-icon flag-icon-ru" id="current-flag"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li>
+                                <a class="dropdown-item language-option fs-6" href="#" data-flag="ru"
+                                    data-lang="Русский">
+                                    <span class="flag-icon flag-icon-ru"></span> Русский
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item language-option fs-6" href="#" data-flag="us"
+                                    data-lang="English">
+                                    <span class="flag-icon flag-icon-us"></span> English
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item language-option fs-6" href="#" data-flag="de"
+                                    data-lang="Deutsch">
+                                    <span class="flag-icon flag-icon-de"></span> Deutsch
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle fs-6" href="#" id="currencyDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="current-currency">EUR (€)</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="currencyDropdown">
+                            <li><a class="dropdown-item currency-option fs-6" href="#" data-currency="USD ($)">USD
+                                    ($)</a>
+                            </li>
+                            <li><a class="dropdown-item currency-option active fs-6" href="#"
+                                    data-currency="EUR (€)">EUR
+                                    (€)</a></li>
+                            <li><a class="dropdown-item currency-option fs-6" href="#" data-currency="RUB (₽)">RUB
+                                    (₽)</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="icon-wrapper d-none d-lg-flex">
+                    <a href="#" aria-label="Профиль"><i class="bi bi-person fs-5"></i></a>
+                    <a href="#" aria-label="Поиск"><i class="bi bi-search fs-5"></i></a>
+                    <a href="#" aria-label="Избранное"><i class="bi bi-heart fs-5"></i></a>
+                    <a href="#" aria-label="Корзина"><i class="bi bi-cart fs-5"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="mobile-bottom-nav d-lg-none">
+        <a href="#" class="mobile-bottom-nav-item active">
+            <i class="bi bi-list fs-5"></i>
+            <span class="fs-6">Каталог</span>
+        </a>
+        <a href="#" class="mobile-bottom-nav-item">
+            <i class="bi bi-heart fs-5"></i>
+            <span class="fs-6">Избранное</span>
+        </a>
+        <a href="#" class="mobile-bottom-nav-item">
+            <i class="bi bi-cart fs-5"></i>
+            <span class="fs-6">Корзина</span>
+        </a>
+    </nav>
+
+    <!-- Путь -->
+    <div class="path-bg">
+        <div class="container">
+            <div class="path-custom d-flex flex-wrap m-0">
+                <span class="path-item"><a href="#" class="path-link">Главная</a></span>
+                <span class="path-item active"><a href="#" class="path-link">Путь</a></span>
+                <span class="path-item active"><a href="#" class="path-link">Данная страница</a></span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Navbar menu -->
+    <section class="section-bg-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="d-md-none mb-3">
+                        <button class="btn-secondary py-2 px-3 w-100 d-flex justify-content-between align-items-center"
+                            type="button" id="mobilePanelToggle">
+                            <span>Меню профиля</span>
+                            <i class="bi bi-chevron-down" id="mobilePanelIcon"></i>
+                        </button>
+                    </div>
+                    <div class="personal-panel d-none d-md-block" id="mobilePersonalPanel">
+                        <div class="panel-section">
+                            <div class="panel-item fw-semibold active">Панель управления</div>
+                        </div>
+                        <div class="panel-section">
+                            <div class="panel-item fw-semibold">Профиль</div>
+                            <div class="panel-item panel-padding">Презентация</div>
+                            <div class="panel-item panel-padding">Реквезиты и документы</div>
+                            <div class="panel-item panel-padding">Новости</div>
+                            <div class="panel-item panel-padding">Социальные сети</div>
+                        </div>
+                         <div class="panel-section">
+                            <div class="panel-item fw-semibold">На продажу</div>
+                            <div class="panel-item panel-padding">Художественные произведения</div>
+                            <div class="panel-item panel-padding">Проданные работы</div>
+                        </div>
+
+                        <div class="panel-section">
+                            <div class="panel-item fw-semibold">Мои покупки</div>
+                        </div>
+
+                        <div class="panel-section">
+                            <div class="panel-item fw-semibold ">Избранное</div>
+                            <div class="panel-item panel-padding">Мои любимые работы</div>
+                            <div class="panel-item panel-padding">Мои любимые художники</div>
+                        </div>
+
+                        <div class="panel-section logout-section">
+                            <div class="panel-item fw-semibold ">Выход</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Конец navbar -->
+
+                <div class="col-md-9">
+                    <div class="p-2 mt-4">
+                        <!-- начало секции -->
+                        <div class="row mb-5">
+                            <div class="col-lg-4 mb-4 mb-lg-0">
+                                <div class="d-flex flex-column align-items-center">
+                                    <img class="img-fluid rounded-3 avatar-container mb-3" src="/images/avatar.png"
+                                        alt="Аватар профиля">
+                                    <p class="text-secondary mb-3">Увеличение/Уменьшение изображения</p>
+                                    <div class="d-flex gap-3">
+                                        <div class="btn-zoom">
+                                            <span class="fs-4">+</span>
+                                        </div>
+                                        <div class="btn-zoom">
+                                            <span class="fs-4">-</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-8">
+                                <h2 class="fs-2 fw-semibold mb-4">Аватар профиля</h2>
+
+                                <div class="d-flex flex-wrap gap-3">
+                                    <button class="btn-primary px-3 py-2 rounded-3">
+                                        Загрузить новое фото
+                                    </button>
+
+                                    <button class="btn-secondary px-3 py-2 rounded-3">
+                                        Удалить загруженное фото
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="mb-4">
+                            <h4 class="small ">Фамилия, имя, отчество</h4>
+                            <input type="" class="input-primary form-control px-3 py-2 fs-6 mb-1" placeholder=""
+                                required>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small ">Псевдоним</h4>
+                            <input type="" class="input-primary form-control px-3 py-2 fs-6 mb-1" placeholder=""
+                                required>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small ">Что отображать на сайте</h4>
+                            <div class="agreement-checkbox mb-2">
+                                <input type="checkbox" id="" required class="form-check-input">
+                                <label for="agreement" class="form-check-label small">Реальное имя</label>
+                            </div>
+                            <div class="agreement-checkbox">
+                                <input type="checkbox" id="" required class="form-check-input">
+                                <label for="agreement" class="form-check-label small">Псевдоним</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small ">Цитата автора</h4>
+                            <input type="" class="input-primary form-control px-3 py-2 fs-6 mb-1" placeholder=""
+                                required>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small ">Профессиональный художник</h4>
+                            <div class="agreement-checkbox mb-2">
+                                <input type="checkbox" id="" required class="form-check-input">
+                                <label for="agreement" class="form-check-label small">Да</label>
+                            </div>
+                            <div class="agreement-checkbox">
+                                <input type="checkbox" id="" required class="form-check-input">
+                                <label for="agreement" class="form-check-label small">Нет</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small ">Биография автора</h4>
+                            <input type="" class="input-primary form-control px-3 py-2 fs-6 mb-1" placeholder=""
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="small ">Достижения (награды, статьи, выставки)</h4>
+                            <input type="" class="input-primary form-control px-3 py-2 fs-6 mb-1" placeholder=""
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="small">Обучение</h4>
+                            <input type="" class="input-primary form-control px-3 py-2 fs-6 mb-1" placeholder=""
+                                required>
+                        </div>
+
+
+
+                        <div class="mb-4">
+                            <h4 class="small ">Местоположение</h4>
+                            <input type="" class="input-primary form-control w-50 px-3 py-2 fs-6 mb-1" placeholder=""
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="small ">Основной язык</h4>
+                            <input type="" class="input-primary form-control w-50 px-3 py-2 fs-6 mb-1" placeholder=""
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="small ">Год рождения</h4>
+                            <input type="" class="input-primary form-control w-50 px-3 py-2 fs-6 mb-1" placeholder=""
+                                required>
+                        </div>
+
+                        <div class="agreement-checkbox mb-4">
+                            <input type="checkbox" id="" required class="form-check-input">
+                            <label for="agreement" class="form-check-label small">Я согласен на обработку
+                                персональных данных.*</label>
+                        </div>
+
+                        <button type="button" class="btn-primary px-3 py-2 fs-6">Сохранить</button>
+
+                        <!-- конец секции -->
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Подписка на новости -->
+    <section id="subscribe_news" class="section-bg-gray">
+        <div class="container">
+            <div class="title text-center text-md-start mb-4">
+                <h1 class="fs-3 fs-md-2 mb-2">Подписка на новости</h1>
+            </div>
+            <form class="input-button-form mb-3 d-flex flex-column flex-md-row gap-3">
+                <input type="email" class="input-primary form-control px-3 py-2" placeholder="Email" required>
+                <button type="button" class="btn-primary px-3 py-2">Подписаться</button>
+            </form>
+            <div class="agreement-checkbox">
+                <input type="checkbox" id="" required class="form-check-input">
+                <label for="agreement" class="form-check-label small">Я согласен на обработку
+                    персональных данных.*</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h5 class="mb-2 fs-6 fw-bold">О нас</h5>
+                    <a href="#" class="footer-link mb-2 fs-6">О Галерее</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Коллектив</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Новости</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Для художников</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Справочный центр</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Оферта</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h5 class="mb-2 fs-6 fw-bold">Купить</h5>
+                    <a href="#" class="footer-link mb-2 fs-6">Все картины</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Все художники</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Абстрактный</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Сюрреализм</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Импрессионизм</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Символизм</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h5 class="mb-2 fs-6 fw-bold">Продать</h5>
+                    <a href="#" class="footer-link mb-2 fs-6">Регистрация</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Авторизация</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Как продавать?</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Требования к работам</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h5 class="mb-2 fs-6 fw-bold">Соцсети</h5>
+                    <a href="#" class="footer-link mb-2 fs-6">Instagram</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Facebook</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Youtube</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom text-center">
+                <p class="m-0 fs-6">©2024 - 2025 - Baranowart.com Все права защищены</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts/header.js" defer></script>
+<script src="scripts/personal-panel.js" defer></script>
+
+</html>
