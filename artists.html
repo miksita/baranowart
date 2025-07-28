@@ -17,24 +17,43 @@
 </head>
 
 <body>
-    <!--Header -->
+    <!-- Header -->
     <header class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
-            <a class="navbar-brand text-white fw-semibold fs-5 d-none d-lg-block" href="#"
-                aria-label="Логотип галереи">Logo</a>
-
-            <a class="mobile-logo d-lg-none fs-5 fw-semibold" href="#" aria-label="Логотип галереи">Logo</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                aria-expanded="false" aria-label="Переключить навигацию">
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent" aria-expanded="false" aria-label="Переключить навигацию">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="d-flex d-lg-none align-items-center mobile-icons">
-                <a href="#" aria-label="Профиль"><i class="bi bi-person fs-5"></i></a>
+            <div
+                class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 justify-content-center justify-content-lg-start order-2">
+                <a class="navbar-brand" href="#" aria-label="Логотип галереи">
+                    <img src="/images/logo.png" alt="Логотип" class="header-logo">
+                </a>
+            </div>
+
+            <div class="d-flex d-lg-none align-items-center mobile-icons order-3">
+                <a href="#" class="mobile-icon" aria-label="Поиск" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="bi bi-search fs-5"></i>
+                </a>
+                <div class="nav-item dropdown mobile-currency-dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center mobile-icon" href="#"
+                        id="mobileCurrencyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="mobile-current-currency">€</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mobileCurrencyDropdown">
+                        <li><a class="dropdown-item currency-option fs-6" href="#" data-currency="USD ($)">$ USD</a>
+                        </li>
+                        <li><a class="dropdown-item currency-option active fs-6" href="#" data-currency="EUR (€)">€
+                                EUR</a></li>
+                        <li><a class="dropdown-item currency-option fs-6" href="#" data-currency="RUB (₽)">₽ RUB</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="mobile-icon" aria-label="Профиль"><i class="bi bi-person fs-5"></i></a>
                 <div class="nav-item dropdown mobile-language-dropdown">
-                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="mobileLanguageDropdown"
-                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center mobile-icon" href="#"
+                        id="mobileLanguageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="flag-icon flag-icon-ru" id="mobile-current-flag"></span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="mobileLanguageDropdown">
@@ -57,13 +76,15 @@
                 </div>
             </div>
 
-            <nav class="collapse navbar-collapse" id="navbarContent">
+            <div class="collapse navbar-collapse order-4 order-lg-3" id="navbarContent">
                 <div class="mobile-header d-lg-none">
                     <button class="btn-close btn-close-white" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarContent" aria-label="Закрыть"></button>
                 </div>
 
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+
                     <li class="nav-item">
                         <a class="nav-link fs-6" href="#">Главная</a>
                     </li>
@@ -165,7 +186,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item dropdown d-none d-lg-block">
+                    <li class="nav-item dropdown d-none d-lg-block mobile-currency-dropdown">
                         <a class="nav-link dropdown-toggle fs-6" href="#" id="currencyDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span id="current-currency">EUR (€)</span>
@@ -186,11 +207,13 @@
 
                 <div class="icon-wrapper d-none d-lg-flex">
                     <a href="#" aria-label="Профиль"><i class="bi bi-person fs-5"></i></a>
-                    <a href="#" aria-label="Поиск"><i class="bi bi-search fs-5"></i></a>
-                    <a href="#" aria-label="Избранное"><i class="bi bi-heart fs-5"></i></a>
+                    <a href="#" class="mobile-icon" aria-label="Поиск" data-bs-toggle="modal"
+                        data-bs-target="#searchModal">
+                        <i class="bi bi-search fs-5"></i>
+                    </a> <a href="#" aria-label="Избранное"><i class="bi bi-heart fs-5"></i></a>
                     <a href="#" aria-label="Корзина"><i class="bi bi-cart fs-5"></i></a>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
@@ -209,8 +232,6 @@
         </a>
     </nav>
     <!-- Конец Header -->
-
-
     <!-- Путь -->
 
     <div class="path-bg">
@@ -228,7 +249,8 @@
         <div class="container">
             <div class="text-center text-md-start mb-5">
                 <h1 class="fs-3 fs-md-2 mb-2">Познакомьтесь с нашими современными российскими художниками</h1>
-                <p class="fs-6 mb-5">Ознакомьтесь с профилями современных российских художников, представленных в галерее
+                <p class="fs-6 mb-5">Ознакомьтесь с профилями современных российских художников, представленных в
+                    галерее
                     Baranow Art. Наша тщательно отобранная коллекция включает как начинающих талантов, так и признанных
                     мастеров, каждый из которых вносит свой уникальный вклад в современное российское искусство.
                     Погрузитесь в их биографии, просмотрите их портфолио и узнайте истории, стоящие за их захватывающими
@@ -328,6 +350,31 @@
             </div>
         </div>
     </footer>
+    
+     <!-- Модальное окно поиска -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullwidth">
+            <div class="modal-content search-modal-content">
+                <div class="modal-header search-modal-header">
+                    <form class="search-form w-100">
+                        <input type="text" class="form-control search-input" placeholder="">
+                        <select class="form-select search-select">
+                            <option>Поиск по...</option>
+                            <option>Поиск по художникам</option>
+                            <option>Поиск по картинам</option>
+                        </select>
+                        <button type="submit" class="btn-primary search-button">Найти</button>
+                    </form>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Закрыть"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Затемнение фона -->
+    <div class="search-modal-backdrop"></div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="scripts/header.js" defer></script>
