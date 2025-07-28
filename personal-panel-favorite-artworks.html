@@ -20,22 +20,15 @@
    <!-- Header -->
     <header class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
-            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarContent" aria-expanded="false" aria-label="Переключить навигацию">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div
-                class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 justify-content-center justify-content-lg-start order-2">
+            <div class="d-flex align-items-center order-1">
                 <a class="navbar-brand" href="#" aria-label="Логотип галереи">
                     <img src="/images/logo.png" alt="Логотип" class="header-logo">
                 </a>
             </div>
 
-            <div class="d-flex d-lg-none align-items-center mobile-icons order-3">
-                <a href="#" class="mobile-icon" aria-label="Поиск" data-bs-toggle="modal" data-bs-target="#searchModal">
-                    <i class="bi bi-search fs-5"></i>
-                </a>
+            <div class="d-flex d-lg-none align-items-center mobile-icons order-2 mx-auto">
+
                 <div class="nav-item dropdown mobile-currency-dropdown">
                     <a class="nav-link dropdown-toggle d-flex align-items-center mobile-icon" href="#"
                         id="mobileCurrencyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,7 +43,6 @@
                         </li>
                     </ul>
                 </div>
-                <a href="#" class="mobile-icon" aria-label="Профиль"><i class="bi bi-person fs-5"></i></a>
                 <div class="nav-item dropdown mobile-language-dropdown">
                     <a class="nav-link dropdown-toggle d-flex align-items-center mobile-icon" href="#"
                         id="mobileLanguageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -74,17 +66,27 @@
                         </li>
                     </ul>
                 </div>
+
+                <a href="#" class="mobile-icon" aria-label="Профиль"><i class="bi bi-person fs-5"></i></a>
+
+                <a href="#" class="mobile-icon" aria-label="Поиск" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="bi bi-search fs-5"></i>
+                </a>
+                
             </div>
 
-            <div class="collapse navbar-collapse order-4 order-lg-3" id="navbarContent">
+            <button class="navbar-toggler order-3 ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent" aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse order-4 order-lg-2" id="navbarContent">
                 <div class="mobile-header d-lg-none">
                     <button class="btn-close btn-close-white" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarContent" aria-label="Закрыть"></button>
                 </div>
 
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-
-
                     <li class="nav-item">
                         <a class="nav-link fs-6" href="#">Главная</a>
                     </li>
@@ -193,14 +195,11 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="currencyDropdown">
                             <li><a class="dropdown-item currency-option fs-6" href="#" data-currency="USD ($)">USD
-                                    ($)</a>
-                            </li>
+                                    ($)</a></li>
                             <li><a class="dropdown-item currency-option active fs-6" href="#"
-                                    data-currency="EUR (€)">EUR
-                                    (€)</a></li>
+                                    data-currency="EUR (€)">EUR (€)</a></li>
                             <li><a class="dropdown-item currency-option fs-6" href="#" data-currency="RUB (₽)">RUB
-                                    (₽)</a>
-                            </li>
+                                    (₽)</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -210,7 +209,8 @@
                     <a href="#" class="mobile-icon" aria-label="Поиск" data-bs-toggle="modal"
                         data-bs-target="#searchModal">
                         <i class="bi bi-search fs-5"></i>
-                    </a> <a href="#" aria-label="Избранное"><i class="bi bi-heart fs-5"></i></a>
+                    </a>
+                    <a href="#" aria-label="Избранное"><i class="bi bi-heart fs-5"></i></a>
                     <a href="#" aria-label="Корзина"><i class="bi bi-cart fs-5"></i></a>
                 </div>
             </div>
