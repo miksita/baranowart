@@ -127,11 +127,9 @@
 }
 
 
-
-
 .language-tabs {
     display: flex;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: var(--color-border);
 }
 
 .lang-tab {
@@ -141,7 +139,7 @@
     border-bottom: 2px solid transparent;
     cursor: pointer;
     font-weight: 500;
-    color: #6c757d;
+    color: var(--color-text-primary);
     transition: all 0.3s;
 }
 
@@ -150,18 +148,6 @@
     border-bottom-color: var(--color-accent);
 }
 
-.btn-generate {
-    background-color: var(--color-accent);
-    color: var(--color-text-button);
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.btn-generate:hover {
-    background-color: var(--color-bg-gray);
-}
 
 .language-content textarea {
     width: 100%;
