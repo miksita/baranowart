@@ -38,3 +38,67 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+            if (typeof tinymce !== 'undefined') {
+                tinymce.init({
+                    selector: '.tinymcecontent',
+                    plugins: 'link lists table code',
+                    toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright | bullist numlist | link table | code',
+                    menubar: false,
+                    skin: 'bootstrap',
+                    content_css: 'bootstrap',
+                    height: 300
+                });
+            }
+        });
+
+
+        // Переключение между языками
+document.querySelectorAll('.lang-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+        // Убираем активный класс у всех табов
+        document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+        // Добавляем активный класс текущему табу
+        this.classList.add('active');
+        
+        // Скрываем все textarea
+        document.querySelectorAll('.language-content textarea').forEach(ta => {
+            ta.style.display = 'none';
+            ta.classList.remove('active');
+        });
+        
+        // Показываем активную textarea
+        const lang = this.dataset.lang;
+        const activeTextarea = document.getElementById(`content_${lang}`);
+        activeTextarea.style.display = 'block';
+        activeTextarea.classList.add('active');
+    });
+});
+
+document.getElementById('generateTextBtn').addEventListener('click', function() {
+    const activeTab = document.querySelector('.lang-tab.active');
+    const lang = activeTab.dataset.lang;
+    const textarea = document.getElementById(`content_${lang}`);
+    
+    generateText(lang).then(generatedText => {
+        textarea.value = generatedText;
+        
+        if (lang === 'en') {
+            translateText(generatedText, 'en', 'de').then(translated => {
+                document.getElementById('content_de').value = translated;
+            });
+            translateText(generatedText, 'en', 'ru').then(translated => {
+                document.getElementById('content_ru').value = translated;
+            });
+        }
+    });
+});
+
+async function generateText(lang) {
+    return `Generated description in ${lang}`;
+}
+
+async function translateText(text, fromLang, toLang) {
+    return `Translated to ${toLang}: ${text}`;
+}

@@ -126,3 +126,44 @@
     transition: all 0.2s;
 }
 
+
+
+
+.language-tabs {
+    display: flex;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.lang-tab {
+    padding: 8px 16px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-weight: 500;
+    color: #6c757d;
+    transition: all 0.3s;
+}
+
+.lang-tab.active {
+    color: var(--color-text-primary);
+    border-bottom-color: var(--color-accent);
+}
+
+.btn-generate {
+    background-color: var(--color-accent);
+    color: var(--color-text-button);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-generate:hover {
+    background-color: var(--color-bg-gray);
+}
+
+.language-content textarea {
+    width: 100%;
+    min-height: 150px;
+}

@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/styles/components/header.css">
+    <link rel="stylesheet" href="/styles/components/path.css">
+    <link rel="stylesheet" href="/styles/components/footer.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/personal-panel.css">
+    <title></title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-custom">
+        <img src="/assets/components/pb/templates/v2/img/core-img/logon2.svg?ver=1753800807" class="top_logo_desktop">
+
+        <div class="container">
+
+            <div class="d-flex align-items-center order-1">
+                <a class="navbar-brand" href="#" aria-label="Логотип галереи">
+                    <!--img src="https://baranowart.com/assets/components/pb/templates/v2/img/core-img/logon2.svg?ver=1753778377" alt="Логотип" class="header-logo"-->
+
+                </a>
+            </div>
+
+            <div class="d-flex d-lg-none align-items-center mobile-icons order-2">
+
+                <div class="nav-item dropdown mobile-currency-dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center mobile-icon" href="#"
+                        id="mobileCurrencyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="mobile-current-currency">€</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mobileCurrencyDropdown">
+                        <li><a class="dropdown-item currency-option fs-6" href="#" data-currency="USD ($)">$ USD</a>
+                        </li>
+                        <li><a class="dropdown-item currency-option active fs-6" href="#" data-currency="EUR (€)">€
+                                EUR</a></li>
+                        <li><a class="dropdown-item currency-option fs-6" href="#" data-currency="RUB (₽)">₽ RUB</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-item dropdown mobile-language-dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center mobile-icon" href="#"
+                        id="mobileLanguageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="flag-icon flag-icon-ru" id="mobile-current-flag"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mobileLanguageDropdown">
+                        <li>
+                            <a class="dropdown-item language-option fs-6" href="#" data-flag="ru" data-lang="Русский">
+                                <span class="flag-icon flag-icon-ru"></span> Русский
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item language-option fs-6" href="#" data-flag="us" data-lang="English">
+                                <span class="flag-icon flag-icon-us"></span> English
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item language-option fs-6" href="#" data-flag="de" data-lang="Deutsch">
+                                <span class="flag-icon flag-icon-de"></span> Deutsch
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="#" class="mobile-icon" aria-label="Профиль"><i class="bi bi-person fs-5"></i></a>
+
+                <a href="#" class="mobile-icon" aria-label="Поиск" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="bi bi-search fs-5"></i>
+                </a>
+
+            </div>
+
+            <button class="navbar-toggler order-3 ms-end" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent" aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse order-4 order-lg-2" id="navbarContent">
+                <div class="mobile-header d-lg-none">
+                    <button class="btn-close btn-close-white" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-label="Закрыть"></button>
+                </div>
+
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fs-6" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6" href="#">О нас</a>
+                    </li>
+
+                    <li class="nav-item dropdown position-relative d-lg-block d-none">
+                        <a class="nav-link dropdown-toggle fs-6" href="#" id="paintingsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Картины
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-paintings" aria-labelledby="paintingsDropdown">
+                            <div class="d-flex flex-column flex-lg-row">
+                                <div class="dropdown-menu-column">
+                                    <span class="dropdown-menu-title fs-6">Стиль</span>
+                                    <a href="#" class="dropdown-menu-item fs-6">Абстрактный</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Восточное искусство</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Геометрическое искусство</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Духовное искусство</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Образный</a>
+                                    <a href="#" class="dropdown-menu-all fs-6">Все стили</a>
+                                </div>
+                                <div class="dropdown-menu-column">
+                                    <span class="dropdown-menu-title fs-6">Техника</span>
+                                    <a href="#" class="dropdown-menu-item fs-6">Акрил</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Акварель</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Масло</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Пастель</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Гуашь</a>
+                                    <a href="#" class="dropdown-menu-all fs-6">Все техники</a>
+                                </div>
+                                <div class="dropdown-menu-column">
+                                    <span class="dropdown-menu-title fs-6">Тема</span>
+                                    <a href="#" class="dropdown-menu-item fs-6">Абстрактный</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Геометрический</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Граффити</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Красочный</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Машина</a>
+                                    <a href="#" class="dropdown-menu-all fs-6">Все темы</a>
+                                </div>
+                                <div class="dropdown-menu-column">
+                                    <span class="dropdown-menu-title fs-6">Размер</span>
+                                    <a href="#" class="dropdown-menu-item fs-6">Маленький</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Средний</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Большой</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">Очень большой</a>
+                                </div>
+                                <div class="dropdown-menu-column">
+                                    <span class="dropdown-menu-title fs-6">Стоимость (€)</span>
+                                    <a href="#" class="dropdown-menu-item fs-6">менее 100</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">1000 - 10000</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">10000 - 50000</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">50000 - 100000</a>
+                                    <a href="#" class="dropdown-menu-item fs-6">более чем 100000</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link fs-6" href="#">Картины</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fs-6" href="#">Художники</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6" href="#">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-6" href="#">Новости</a>
+                    </li>
+
+                    <li class="nav-item dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center fs-6" href="#"
+                            id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="flag-icon flag-icon-ru" id="current-flag"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li>
+                                <a class="dropdown-item language-option fs-6" href="#" data-flag="ru"
+                                    data-lang="Русский">
+                                    <span class="flag-icon flag-icon-ru"></span> Русский
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item language-option fs-6" href="#" data-flag="us"
+                                    data-lang="English">
+                                    <span class="flag-icon flag-icon-us"></span> English
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item language-option fs-6" href="#" data-flag="de"
+                                    data-lang="Deutsch">
+                                    <span class="flag-icon flag-icon-de"></span> Deutsch
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown d-none d-lg-block mobile-currency-dropdown">
+                        <a class="nav-link dropdown-toggle fs-6" href="#" id="currencyDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="current-currency">EUR (€)</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="currencyDropdown">
+                            <li><a class="dropdown-item currency-option fs-6" href="#" data-currency="USD ($)">USD
+                                    ($)</a></li>
+                            <li><a class="dropdown-item currency-option active fs-6" href="#"
+                                    data-currency="EUR (€)">EUR (€)</a></li>
+                            <li><a class="dropdown-item currency-option fs-6" href="#" data-currency="RUB (₽)">RUB
+                                    (₽)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="icon-wrapper d-none d-lg-flex">
+                    <a href="#" aria-label="Профиль"><i class="bi bi-person fs-5"></i></a>
+                    <a href="#" class="mobile-icon" aria-label="Поиск" data-bs-toggle="modal"
+                        data-bs-target="#searchModal">
+                        <i class="bi bi-search fs-5"></i>
+                    </a>
+                    <a href="#" aria-label="Избранное"><i class="bi bi-heart fs-5"></i></a>
+                    <a href="#" aria-label="Корзина"><i class="bi bi-cart fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="mobile-bottom-nav d-lg-none">
+        <a href="#" class="mobile-bottom-nav-item active">
+            <i class="bi bi-list fs-5"></i>
+            <span class="fs-6">Каталог</span>
+        </a>
+        <a href="#" class="mobile-bottom-nav-item">
+            <i class="bi bi-heart fs-5"></i>
+            <span class="fs-6">Избранное</span>
+        </a>
+        <a href="#" class="mobile-bottom-nav-item">
+            <i class="bi bi-cart fs-5"></i>
+            <span class="fs-6">Корзина</span>
+        </a>
+    </nav>
+    <!-- Конец Header -->
+
+
+    <!-- Путь -->
+    <div class="path-bg">
+        <div class="container">
+            <div class="path-custom d-flex flex-wrap m-0">
+                <span class="path-item"><a href="#" class="path-link">Главная</a></span>
+                <span class="path-item active"><a href="#" class="path-link">Путь</a></span>
+                <span class="path-item active"><a href="#" class="path-link">Данная страница</a></span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Navbar menu -->
+    <section class="section-bg-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="d-md-none mb-3">
+                        <button class="btn-secondary py-2 px-3 w-100 d-flex justify-content-between align-items-center"
+                            type="button" id="mobilePanelToggle">
+                            <span>Меню профиля</span>
+                            <i class="bi bi-chevron-down" id="mobilePanelIcon"></i>
+                        </button>
+                    </div>
+                    <div class="personal-panel d-none d-md-block" id="mobilePersonalPanel">
+                        <div class="panel-section">
+                            <div class="panel-item fw-semibold active">Панель управления</div>
+                        </div>
+                        <div class="panel-section">
+                            <div class="panel-item fw-semibold">Профиль</div>
+                            <div class="panel-item panel-padding">Презентация</div>
+                            <div class="panel-item panel-padding">Реквезиты и документы</div>
+                            <div class="panel-item panel-padding">Новости</div>
+                            <div class="panel-item panel-padding">Социальные сети</div>
+                        </div>
+                        <div class="panel-section">
+                            <div class="panel-item fw-semibold">На продажу</div>
+                            <div class="panel-item panel-padding">Художественные произведения</div>
+                            <div class="panel-item panel-padding">Проданные работы</div>
+                        </div>
+
+                        <div class="panel-section">
+                            <div class="panel-item fw-semibold">Мои покупки</div>
+                        </div>
+
+                        <div class="panel-section">
+                            <div class="panel-item fw-semibold ">Избранное</div>
+                            <div class="panel-item panel-padding">Мои любимые работы</div>
+                            <div class="panel-item panel-padding">Мои любимые художники</div>
+                        </div>
+
+                        <div class="panel-section logout-section">
+                            <div class="panel-item fw-semibold ">Выход</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- конец Navbar menu -->
+
+
+
+                <div class="col-md-9">
+                    <!-- начало секции -->
+
+                    <div class="col-md-9">
+                        <h1 class="fs-3 mb-4 mb-md-5 mt-md-0 mt-4 text-start">Разместить предложение</h1>
+
+                        <div class="mb-4">
+                            <h4 class="small">Заголовок</h4>
+                            <input type="text" class="input-primary form-control px-3 py-2 fs-6 mb-1" placeholder=""
+                                required>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small">Артикул</h4>
+                            <input type="text" class="input-primary px-3 py-2 fs-6 mb-1" value="S-20251-449" readonly>
+                        </div>
+
+
+                        <div class="row mb-5">
+                            <h4 for="content" class="small">Описание:</h4>
+                            <div class="col-12 col-md-9">
+                                <div class="language-tabs mb-3">
+                                    <button type="button" class="lang-tab active" data-lang="en">English</button>
+                                    <button type="button" class="lang-tab" data-lang="de">Deutsch</button>
+                                    <button type="button" class="lang-tab" data-lang="ru">Русский</button>
+                                </div>
+
+                                <div class="language-content">
+                                    <textarea class="form-control tinymcecontent active" data-type="field"
+                                        id="content_en" name="field[content_en]" rows="10"
+                                        placeholder="Enter description in English..."></textarea>
+
+                                    <textarea class="form-control tinymcecontent" data-type="field" id="content_de"
+                                        name="field[content_de]" rows="10"
+                                        placeholder="Beschreibung auf Deutsch eingeben..."
+                                        style="display:none;"></textarea>
+
+                                    <textarea class="form-control tinymcecontent" data-type="field" id="content_ru"
+                                        name="field[content_ru]" rows="10" placeholder="Введите описание на русском..."
+                                        style="display:none;"></textarea>
+                                </div>
+
+                                <button type="button" class="btn-primary px-3 py-2 mt-3" id="generateTextBtn">
+                                    <i class="fas fa-magic"></i> Сгенерировать текст
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h4 class="small">Прикрепить фотографии</h4>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start align-items-sm-center gap-4">
+                                        <input class="form-control" type="file" id="formFileMultiple"
+                                            name="formFileMultiple[]" accept="image/png, image/jpeg" multiple />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <hr class="dashed">
+
+                        <div class="mb-4">
+                            <h4 class="small">Категория:</h4>
+                            <select class="form-control selectized2 px-3 py-2 fs-6 mb-1">
+                                <option value="10">Картины</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small">Состояние картины:</h4>
+                            <select class="form-control selectized2 px-3 py-2 fs-6 mb-1">
+                                <option value="0">-----</option>
+                                <option value="158">Идеальное</option>
+                                <option value="159">Очень хорошее</option>
+                                <option value="160">Хорошее</option>
+                                <option value="161">Среднее</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small">Стиль:</h4>
+                            <select class="form-control selectized2 px-3 py-2 fs-6 mb-1">
+                                <option value="0">---</option>
+                                <option value="585">Абстрактный</option>
+                                <option value="3482">Авангардизм</option>
+                                <option value="587">Восточное искусство</option>
+                                <option value="588">Геометрическое искусство</option>
+                                <option value="607">Гиперреализм</option>
+                                <option value="589">Духовное искусство</option>
+                                <option value="591">Иллюстрация</option>
+                                <option value="592">Импрессионизм</option>
+                                <option value="586">Искусство аутсайдера</option>
+                                <option value="593">Каллиграфия</option>
+                                <option value="594">Классицизм</option>
+                                <option value="595">Концептуальное искусство</option>
+                                <option value="3912">Космизм</option>
+                                <option value="596">Кубизм</option>
+                                <option value="597">Лэнд-арт</option>
+                                <option value="4042">Метафизика</option>
+                                <option value="598">Минимализм</option>
+                                <option value="3480">Модернизм</option>
+                                <option value="599">Наивное искусство</option>
+                                <option value="590">Образный</option>
+                                <option value="601">Поп-арт</option>
+                                <option value="2775">Постмодернизм</option>
+                                <option value="833">Реализм</option>
+                                <option value="3483">Романтизм</option>
+                                <option value="602">Символизм</option>
+                                <option value="604">Стрит-арт</option>
+                                <option value="603">Сюрреализм</option>
+                                <option value="600">Трайбл-арт</option>
+                                <option value="4940">Фигуратив</option>
+                                <option value="605">Фовизм</option>
+                                <option value="606">Экспрессионизм</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small">Поверхность:</h4>
+                            <select class="form-control selectized2 px-3 py-2 fs-6 mb-1">
+                                <option value="0">---</option>
+                                <option value="canvas">Холст</option>
+                                <option value="linencanvas">Льняной холст</option>
+                                <option value="paper">Бумага</option>
+                                <option value="cardboard">Картон</option>
+                                <option value="wood">Дерево</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small">Техника:</h4>
+                            <select class="form-control selectized2 px-3 py-2 fs-6 mb-1">
+                                <option value="0">---</option>
+                                <option value="acrylic">Акрил</option>
+                                <option value="watercolor">Акварель</option>
+                                <option value="oil">Масло</option>
+                                <option value="pastel">Пастель</option>
+                                <option value="gouache">Гуашь</option>
+                                <option value="acrylic_oil">Смешанная (акрил+масло)</option>
+                                <option value="temperaacrylic">Темпера + Акрил</option>
+                                <option value="tempera">Темпера</option>
+                                <option value="pencil">Карандаш</option>
+                                <option value="inkpen">Тушь+Перо</option>
+                                <option value="coal">Уголь</option>
+                                <option value="mixedmedia">Смешанная техника</option>
+                                <option value="authortechnique">Авторская техника</option>
+                                <option value="texturepaste">Текстурная паста</option>
+                                <option value="oilpastel">Масляная пастель</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small">Тема:</h4>
+                            <select class="form-control selectized2 px-3 py-2 fs-6 mb-1">
+                                <option value="0">---</option>
+                                <option value="496">Абстрактный</option>
+                                <option value="528">Азия</option>
+                                <option value="529">Америка</option>
+                                <option value="517">Анималистика</option>
+                                <option value="509">Архитектура</option>
+                                <option value="530">Африка</option>
+                                <option value="569">Боевое искусство</option>
+                                <option value="552">Бытовой жанр</option>
+                                <option value="504">Велосипед</option>
+                                <option value="554">Видеоигра</option>
+                                <option value="524">Война</option>
+                                <option value="3910">Времена года</option>
+                                <option value="500">Геометрический</option>
+                                <option value="536">Гитара</option>
+                                <option value="548">Горный пейзаж</option>
+                                <option value="511">Город</option>
+                                <option value="508">Городской</option>
+                                <option value="581">Готический</option>
+                                <option value="501">Граффити</option>
+                                <option value="565">Гриб</option>
+                                <option value="566">Дерево</option>
+                                <option value="560">Детские портреты</option>
+                                <option value="3906">Детство</option>
+                                <option value="3905">Дом</option>
+                                <option value="512">Духовность</option>
+                                <option value="3496">Жанровая картина</option>
+                                <option value="561">Женские портреты</option>
+                                <option value="3497">Интерьерная живопись</option>
+                                <option value="523">История</option>
+                                <option value="1234">Казино</option>
+                                <option value="579">Карикатура</option>
+                                <option value="555">Кинотеатр</option>
+                                <option value="556">Комиксы</option>
+                                <option value="3903">Космос</option>
+                                <option value="518">Кошка</option>
+                                <option value="502">Красочный</option>
+                                <option value="551">Лес</option>
+                                <option value="533">Лодка</option>
+                                <option value="519">Лошадь</option>
+                                <option value="1387">Луна</option>
+                                <option value="526">Любовь</option>
+                                <option value="503">Машина</option>
+                                <option value="527">Мировая культура</option>
+                                <option value="513">Мифология</option>
+                                <option value="557">Мода</option>
+                                <option value="532">Морской пейзаж</option>
+                                <option value="505">Мотоцикл</option>
+                                <option value="563">Мужские портреты</option>
+                                <option value="535">Музыка</option>
+                                <option value="537">Музыканты</option>
+                                <option value="558">Мультфильм</option>
+                                <option value="541">Натюрморт</option>
+                                <option value="575">Наука</option>
+                                <option value="583">Научная фантастика</option>
+                                <option value="1393">Небо</option>
+                                <option value="546">Ню обнаженная натура</option>
+                                <option value="544">Обнаженные женщины</option>
+                                <option value="545">Обнаженные мужчины</option>
+                                <option value="510">Памятник</option>
+                                <option value="3499">Панно</option>
+                                <option value="547">Пейзаж</option>
+                                <option value="540">Пианино</option>
+                                <option value="531">Племенной</option>
+                                <option value="534">Пляж</option>
+                                <option value="506">Поезд</option>
+                                <option value="525">Политика</option>
+                                <option value="553">Поп-культура</option>
+                                <option value="559">Портрет</option>
+                                <option value="562">Портреты знаменитостей</option>
+                                <option value="1391">Посуда</option>
+                                <option value="1394">Праздники</option>
+                                <option value="564">Природа</option>
+                                <option value="576">Промышленность</option>
+                                <option value="520">Птица</option>
+                                <option value="549">Пустыня</option>
+                                <option value="3907">Путешествие</option>
+                                <option value="874">Растения</option>
+                                <option value="571">Регби</option>
+                                <option value="514">Религиозные иконы</option>
+                                <option value="515">Религия</option>
+                                <option value="577">Робот</option>
+                                <option value="521">Рыба</option>
+                                <option value="538">Саксофон</option>
+                                <option value="507">Самолет</option>
+                                <option value="550">Сельская местность</option>
+                                <option value="3904">Семья</option>
+                                <option value="584">Сказка</option>
+                                <option value="539">Скрипка</option>
+                                <option value="522">Собака</option>
+                                <option value="3911">Сон</option>
+                                <option value="568">Спорт</option>
+                                <option value="3909">Счастье</option>
+                                <option value="572">Танец</option>
+                                <option value="582">Темная фантазия</option>
+                                <option value="570">Теннис</option>
+                                <option value="574">Технология</option>
+                                <option value="542">Тщеславие</option>
+                                <option value="580">Фантазия</option>
+                                <option value="573">Футбол</option>
+                                <option value="567">Цветы</option>
+                                <option value="516">Эзотеризм</option>
+                                <option value="578">Юмор</option>
+                            </select>
+                        </div>
+
+                        <hr class="dashed">
+
+                        <div class="mb-4">
+                            <h4 class="small">Размер:</h4>
+                            <select class="form-control selectized2 px-3 py-2 fs-6 mb-1">
+                                <option value="0">---</option>
+                                <option value="small">Маленький</option>
+                                <option value="medium">Средний</option>
+                                <option value="large">Большой</option>
+                                <option value="oversized">Очень большой</option>
+                            </select>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-4">
+                                <h4 class="small">Высота:</h4>
+                                <div class="input-group mb-4">
+                                    <input type="number" class="form-control" name="height" value="">
+                                    <span class="input-group-text">см.</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h4 class="small">Ширина:</h4>
+                                <div class="input-group mb-4">
+                                    <input type="number" class="form-control" name="width" value="">
+                                    <span class="input-group-text">см.</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h4 class="small">Толщина:</h4>
+                                <div class="input-group ">
+                                    <input type="number" class="form-control" name="thickness" value="">
+                                    <span class="input-group-text">см.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small">Вес:</h4>
+                            <div class="input-group" style="max-width: 200px;">
+                                <input type="number" class="form-control" name="weight" value="">
+                                <span class="input-group-text">кг.</span>
+                            </div>
+                        </div>
+
+                        <hr class="dashed">
+
+                        <div class="mb-4">
+                            <h4 class="small">Подпись:</h4>
+                            <div class="agreement-checkbox mb-2">
+                                <input type="checkbox" id="sign_front" class="form-check-input">
+                                <label for="sign_front" class="form-check-label small">Подписано художником на
+                                    фронте</label>
+                            </div>
+                            <div class="agreement-checkbox mb-2">
+                                <input type="checkbox" id="sign_back" class="form-check-input">
+                                <label for="sign_back" class="form-check-label small">Подпись художника на
+                                    обороте</label>
+                            </div>
+                            <div class="agreement-checkbox mb-2">
+                                <input type="checkbox" id="certificate" class="form-check-input">
+                                <label for="certificate" class="form-check-label small">Подписанный сертификат
+                                    подлинности</label>
+                            </div>
+                            <div class="agreement-checkbox mb-2">
+                                <input type="checkbox" id="numbered" class="form-check-input">
+                                <label for="numbered" class="form-check-label small">Пронумерованы от руки</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small">Тип произведения:</h4>
+                            <div class="agreement-checkbox mb-2">
+                                <input type="radio" id="unique" name="work_type" class="form-check-input">
+                                <label for="unique" class="form-check-label small">Уникальный экземпляр</label>
+                            </div>
+                            <div class="agreement-checkbox mb-2">
+                                <input type="radio" id="limited" name="work_type" class="form-check-input">
+                                <label for="limited" class="form-check-label small">Ограниченный выпуск</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small">Обрамление:</h4>
+                            <div class="agreement-checkbox mb-2">
+                                <input type="radio" id="framed_yes" name="framing" class="form-check-input">
+                                <label for="framed_yes" class="form-check-label small">Да (в комплекте)</label>
+                            </div>
+                            <div class="agreement-checkbox">
+                                <input type="radio" id="framed_no" name="framing" class="form-check-input">
+                                <label for="framed_no" class="form-check-label small">Нет (или не применимо)</label>
+                            </div>
+                        </div>
+
+                        <hr class="dashed">
+
+                        <div class="mb-4">
+                            <h4 class="small">Картина в работе?</h4>
+                            <div class="agreement-checkbox mb-2">
+                                <input type="radio" id="in_progress_yes" name="in_progress" class="form-check-input">
+                                <label for="in_progress_yes" class="form-check-label small">Да</label>
+                            </div>
+                            <div class="agreement-checkbox mb-2">
+                                <input type="radio" id="in_progress_no" name="in_progress" class="form-check-input"
+                                    checked>
+                                <label for="in_progress_no" class="form-check-label small">Нет</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small">Картина продана?</h4>
+                            <div class="agreement-checkbox mb-2">
+                                <input type="radio" id="sold_yes" name="sold" class="form-check-input">
+                                <label for="sold_yes" class="form-check-label small">Да</label>
+                            </div>
+                            <div class="agreement-checkbox mb-2">
+                                <input type="radio" id="sold_no" name="sold" class="form-check-input" checked>
+                                <label for="sold_no" class="form-check-label small">Нет</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="small">Стоимость:</h4>
+                            <div class="input-group mb-2" style="max-width: 200px;">
+                                <input type="number" class="form-control" name="price" value="0">
+                                <span class="input-group-text">€</span>
+                            </div>
+
+
+                        </div>
+                        <p class="small">После продажи Вашей картины и вычета комиссионных галереи, Вам будет
+                            переведено: 0 €</p>
+                        <p class="small mb-4">Если стоимость равна 0, то картина не будет отображаться в общем
+                            каталоге
+                            картин. Но при этом будет отображаться на странице художника с пометкой "Не для продажи"
+                        </p>
+                    </div>
+
+
+                    <div class="mb-4">
+                        <h4 class="small">Упаковка:</h4>
+                        <select class="form-control selectized2 px-3 py-2 fs-6 mb-1">
+                            <option value="0">-----</option>
+                            <option value="164">Коробка или картонная упаковка</option>
+                            <option value="165">Деревянный ящик</option>
+                            <option value="166">Туба</option>
+                            <option value="167">Конверт</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn-primary px-3 py-2 fs-6 mb-5">Сохранить</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h5 class="mb-2 fs-6 fw-bold">О нас</h5>
+                    <a href="#" class="footer-link mb-2 fs-6">О Галерее</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Коллектив</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Новости</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Для художников</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Справочный центр</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Оферта</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h5 class="mb-2 fs-6 fw-bold">Купить</h5>
+                    <a href="#" class="footer-link mb-2 fs-6">Все картины</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Все художники</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Абстрактный</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Сюрреализм</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Импрессионизм</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Символизм</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h5 class="mb-2 fs-6 fw-bold">Продать</h5>
+                    <a href="#" class="footer-link mb-2 fs-6">Регистрация</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Авторизация</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Как продавать?</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Требования к работам</a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h5 class="mb-2 fs-6 fw-bold">Соцсети</h5>
+                    <a href="#" class="footer-link mb-2 fs-6">Instagram</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Facebook</a>
+                    <a href="#" class="footer-link mb-2 fs-6">Youtube</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom text-center">
+                <p class="m-0 fs-6">©2024 - 2025 - Baranowart.com Все права защищены</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно поиска -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullwidth">
+            <div class="modal-content search-modal-content">
+                <div class="modal-header search-modal-header">
+                    <form class="search-form w-100">
+                        <input type="text" class="form-control search-input" placeholder="">
+                        <select class="form-select search-select">
+                            <option>Поиск по...</option>
+                            <option>Поиск по художникам</option>
+                            <option>Поиск по картинам</option>
+                        </select>
+                        <button type="submit" class="btn-primary search-button">Найти</button>
+                    </form>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Закрыть"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Затемнение фона -->
+    <div class="search-modal-backdrop"></div>
+</body>
+<script src="https://cdn.tiny.cloud/1/YOUR_API_KEY/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts/header.js" defer></script>
+<script src="scripts/personal-panel.js" defer></script>
+
+</html>

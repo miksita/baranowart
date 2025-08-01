@@ -146,7 +146,7 @@
     padding-left: 15px;
     padding-right: 15px;
   }
-  
+
   .navbar-collapse {
     position: fixed;
     top: 0;
@@ -160,7 +160,7 @@
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .navbar-collapse.show {
     transform: translateX(0);
   }
@@ -221,7 +221,7 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .mobile-icons a {
     color: var(--color-text-header-footer);
   }
@@ -349,7 +349,7 @@
   .mobile-icons {
     gap: 0rem;
   }
-  
+
   .navbar-brand {
     max-width: 200px;
     white-space: nowrap;
@@ -444,27 +444,27 @@
     align-items: stretch;
     padding: 0.5rem;
   }
-  
+
   .search-form {
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 2.5rem;
   }
-  
+
   .search-select,
   .search-button {
     width: 100%;
   }
-  
+
   .search-modal-header .btn-close {
     position: absolute;
     top: 1rem;
     right: 1rem;
     margin-left: 0;
   }
-  
+
   .modal-open .navbar-brand,
-  .modal-open .mobile-icons > *:not([data-bs-toggle="modal"]) {
+  .modal-open .mobile-icons>*:not([data-bs-toggle="modal"]) {
     visibility: hidden;
   }
 }
@@ -473,4 +473,23 @@
 #searchModal .modal-header {
   border-bottom: none !important;
   box-shadow: none !important;
+}
+
+.top_logo_desktop {
+  width: 100%;
+  max-width: 118px !important;
+  -webkit-box-shadow: 4px 21px 8px 4px rgba(34, 60, 80, 0.51);
+  -moz-box-shadow: 4px 21px 8px 4px rgba(34, 60, 80, 0.51);
+  box-shadow: 12px 21px 8px 4px rgba(0, 0, 0, 0.45);
+  border-radius: 8px;
+  position: absolute;
+  top: 8px;
+  left: 30px;
+  z-index: 1100;
+}
+
+@media screen and (max-width: 610px) {
+  .top_logo_desktop {
+    max-width: 80px !important;
+  }
 }
