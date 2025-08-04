@@ -149,7 +149,7 @@ body {
     color: var(--color-accent);
 }
 
-.link-arrow {
+a{
   color: var(--color-text-secondary);
   text-decoration: none;
   transition: all 0.3s ease;
@@ -159,17 +159,6 @@ body {
   gap: 0.25em; 
 }
 
-.link-arrow::after {
- content: "↗";   
- display: inline-block;
-  font-size: 0.8em; 
-  transition: transform 0.3s ease;
-}
-
-.link-arrow:hover {
+a:hover {
   color: var(--color-accent);
-}
-
-.link-arrow:hover::after {
-  transform: translateY(-1px);
 }
