@@ -7,23 +7,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/components/header.css">
-    <link rel="stylesheet" href="/styles/components/footer.css">
-    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components/header.css">
+    <link rel="stylesheet" href="styles/components/footer.css">
+    <link rel="stylesheet" href="styles/global.css">
     <title></title>
 </head>
 
 <body>
-      <header class="navbar navbar-expand-lg navbar-custom">
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-custom">
         <img src="/assets/components/pb/templates/v2/img/core-img/logon2.svg?ver=1753800807" class="top_logo_desktop">
-		
-		<div class="container">
+
+        <div class="container">
 
             <div class="d-flex align-items-center order-1">
                 <a class="navbar-brand" href="#" aria-label="Логотип галереи">
                     <!--img src="https://baranowart.com/assets/components/pb/templates/v2/img/core-img/logon2.svg?ver=1753778377" alt="Логотип" class="header-logo"-->
-					
+
                 </a>
             </div>
 
@@ -72,7 +73,7 @@
                 <a href="#" class="mobile-icon" aria-label="Поиск" data-bs-toggle="modal" data-bs-target="#searchModal">
                     <i class="bi bi-search fs-5"></i>
                 </a>
-                
+
             </div>
 
             <button class="navbar-toggler order-3 ms-end" type="button" data-bs-toggle="collapse"
@@ -238,18 +239,20 @@
     <section id="slider-main" class="slider-section">
         <div class="slider-container">
             <div class="slider-content">
-                <div class="text-center text-lg-start mb-4">
-                    <h1 class="fs-3 fs-md-2 mb-2">Новости галереи</h1>
-                    <p class="fs-6">Следите за новостями Baranow Art Gallery — выставки, новые коллекции, проекты с
-                        художниками и важные события в мире современного русского искусства</p>
-                </div>
-                <div class="text-center text-md-start">
-                    <button class="slider-button py-2 px-3">Подробнее</button>
-                </div>
-                <div class="slider-pagination justify-content-center justify-content-lg-start">
-                    <div class="slider-dot active" data-slide="0"></div>
-                    <div class="slider-dot" data-slide="1"></div>
-                    <div class="slider-dot" data-slide="2"></div>
+                <div class="slider-content-info">
+                    <div class="text-center mb-4">
+                        <h1 class="fs-3 fs-md-2 mb-2">Новости галереи</h1>
+                        <p class="fs-6">Следите за новостями Baranow Art Gallery — выставки, новые коллекции, проекты с
+                            художниками и важные события в мире современного русского искусства</p>
+                    </div>
+                    <div class="text-center">
+                        <button class="slider-button py-2 px-3">Подробнее</button>
+                    </div>
+                    <div class="slider-pagination justify-content-center">
+                        <div class="slider-dot active" data-slide="0"></div>
+                        <div class="slider-dot" data-slide="1"></div>
+                        <div class="slider-dot" data-slide="2"></div>
+                    </div>
                 </div>
             </div>
             <div class="slider-image" style="background-image: url('/images/image.png')"></div>
@@ -285,21 +288,21 @@
                 <div class="row g-2 mb-2">
                     <div class="col-md-4">
                         <div class="art-item">
-                            <img src="./../images/painting.jpg" alt="" class="art-img">
+                            <img src="images/painting.jpg" alt="" class="art-img">
                             <div class="art-title py-1 px-3 fs-6">Name</div>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="art-item">
-                            <img src="./../images/painting.jpg" alt="Artwork 2" class="art-img">
+                            <img src="images/painting.jpg" alt="Artwork 2" class="art-img">
                             <div class="art-title py-1 px-3 fs-6">Name</div>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="art-item">
-                            <img src="./../images/painting.jpg" alt="Artwork 3" class="art-img">
+                            <img src="images/painting.jpg" alt="Artwork 3" class="art-img">
                             <div class="art-title py-1 px-3 fs-6">Name</div>
                         </div>
                     </div>
@@ -308,14 +311,14 @@
                 <div class="row g-2">
                     <div class="col-md-6">
                         <div class="art-item">
-                            <img src="./../images/painting.jpg" alt="Artwork 4" class="art-img">
+                            <img src="images/painting.jpg" alt="Artwork 4" class="art-img">
                             <div class="art-title py-1 px-3 fs-6">Name</div>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="art-item">
-                            <img src="./../images/painting.jpg" alt="Artwork 5" class="art-img">
+                            <img src="images/painting.jpg" alt="Artwork 5" class="art-img">
                             <div class="art-title py-1 px-3 fs-6">Name</div>
                         </div>
                     </div>
@@ -383,21 +386,21 @@
                     <div class="artist-card">
                         <div class="gallery-container mb-4">
                             <div class="main-image">
-                                <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                <img src="images/painting.jpg" class="gallery-img" alt="">
                             </div>
                             <div class="side-images">
                                 <div class="side-image">
-                                    <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                    <img src="images/painting.jpg" class="gallery-img" alt="">
                                 </div>
                                 <div class="side-image">
-                                    <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                    <img src="images/painting.jpg" class="gallery-img" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="artist-info">
                             <div class="artist-info-wrapper">
                                 <div class="artist-avatar me-3">
-                                    <img src="/images/avatar.png" alt="Artist">
+                                    <img src="images/avatar.png" alt="Artist">
                                     <button class="favorite-btn ">
                                         <i class="bi bi-heart small"></i>
                                     </button>
@@ -419,58 +422,21 @@
                     <div class="artist-card">
                         <div class="gallery-container mb-4">
                             <div class="main-image">
-                                <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                <img src="images/painting.jpg" class="gallery-img" alt="">
                             </div>
                             <div class="side-images">
                                 <div class="side-image">
-                                    <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                    <img src="images/painting.jpg" class="gallery-img" alt="">
                                 </div>
                                 <div class="side-image">
-                                    <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                    <img src="images/painting.jpg" class="gallery-img" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="artist-info">
                             <div class="artist-info-wrapper">
                                 <div class="artist-avatar me-3">
-                                    <img src="/images/avatar.png" alt="Artist">
-                                    <button class="favorite-btn ">
-                                        <i class="bi bi-heart small"></i>
-                                    </button>
-                                </div>
-                                <div>
-                                    <h5 class="fs-5 fw-semibold">Имя Фамилия</h5>
-                                    <div class="small mb-1">
-                                        <i class="bi bi-geo-alt"></i>
-                                        <span>Страна, Город</span>
-                                    </div>
-                                    <p class="small">Кол-во картин: 12</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-
-                <article class="col-md-6 col-lg-4 mb-4">
-                    <div class="artist-card">
-                        <div class="gallery-container mb-4">
-                            <div class="main-image">
-                                <img src="/images/painting.jpg" class="gallery-img" alt="">
-                            </div>
-                            <div class="side-images">
-                                <div class="side-image">
-                                    <img src="/images/painting.jpg" class="gallery-img" alt="">
-                                </div>
-                                <div class="side-image">
-                                    <img src="/images/painting.jpg" class="gallery-img" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="artist-info">
-                            <div class="artist-info-wrapper">
-                                <div class="artist-avatar me-3">
-                                    <img src="/images/avatar.png" alt="Artist">
+                                    <img src="images/avatar.png" alt="Artist">
                                     <button class="favorite-btn ">
                                         <i class="bi bi-heart small"></i>
                                     </button>
@@ -493,21 +459,21 @@
                     <div class="artist-card">
                         <div class="gallery-container mb-4">
                             <div class="main-image">
-                                <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                <img src="images/painting.jpg" class="gallery-img" alt="">
                             </div>
                             <div class="side-images">
                                 <div class="side-image">
-                                    <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                    <img src="images/painting.jpg" class="gallery-img" alt="">
                                 </div>
                                 <div class="side-image">
-                                    <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                    <img src="images/painting.jpg" class="gallery-img" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="artist-info">
                             <div class="artist-info-wrapper">
                                 <div class="artist-avatar me-3">
-                                    <img src="/images/avatar.png" alt="Artist">
+                                    <img src="images/avatar.png" alt="Artist">
                                     <button class="favorite-btn ">
                                         <i class="bi bi-heart small"></i>
                                     </button>
@@ -530,21 +496,21 @@
                     <div class="artist-card">
                         <div class="gallery-container mb-4">
                             <div class="main-image">
-                                <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                <img src="images/painting.jpg" class="gallery-img" alt="">
                             </div>
                             <div class="side-images">
                                 <div class="side-image">
-                                    <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                    <img src="images/painting.jpg" class="gallery-img" alt="">
                                 </div>
                                 <div class="side-image">
-                                    <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                    <img src="images/painting.jpg" class="gallery-img" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="artist-info">
                             <div class="artist-info-wrapper">
                                 <div class="artist-avatar me-3">
-                                    <img src="/images/avatar.png" alt="Artist">
+                                    <img src="images/avatar.png" alt="Artist">
                                     <button class="favorite-btn ">
                                         <i class="bi bi-heart small"></i>
                                     </button>
@@ -567,21 +533,58 @@
                     <div class="artist-card">
                         <div class="gallery-container mb-4">
                             <div class="main-image">
-                                <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                <img src="images/painting.jpg" class="gallery-img" alt="">
                             </div>
                             <div class="side-images">
                                 <div class="side-image">
-                                    <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                    <img src="images/painting.jpg" class="gallery-img" alt="">
                                 </div>
                                 <div class="side-image">
-                                    <img src="/images/painting.jpg" class="gallery-img" alt="">
+                                    <img src="images/painting.jpg" class="gallery-img" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="artist-info">
                             <div class="artist-info-wrapper">
                                 <div class="artist-avatar me-3">
-                                    <img src="/images/avatar.png" alt="Artist">
+                                    <img src="images/avatar.png" alt="Artist">
+                                    <button class="favorite-btn ">
+                                        <i class="bi bi-heart small"></i>
+                                    </button>
+                                </div>
+                                <div>
+                                    <h5 class="fs-5 fw-semibold">Имя Фамилия</h5>
+                                    <div class="small mb-1">
+                                        <i class="bi bi-geo-alt"></i>
+                                        <span>Страна, Город</span>
+                                    </div>
+                                    <p class="small">Кол-во картин: 12</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="col-md-6 col-lg-4 mb-4">
+                    <div class="artist-card">
+                        <div class="gallery-container mb-4">
+                            <div class="main-image">
+                                <img src="images/painting.jpg" class="gallery-img" alt="">
+                            </div>
+                            <div class="side-images">
+                                <div class="side-image">
+                                    <img src="images/painting.jpg" class="gallery-img" alt="">
+                                </div>
+                                <div class="side-image">
+                                    <img src="images/painting.jpg" class="gallery-img" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="artist-info">
+                            <div class="artist-info-wrapper">
+                                <div class="artist-avatar me-3">
+                                    <img src="images/avatar.png" alt="Artist">
                                     <button class="favorite-btn ">
                                         <i class="bi bi-heart small"></i>
                                     </button>
@@ -616,7 +619,7 @@
                     <article class="col-12 col-md-6 col-lg-4">
                         <div class="news-card h-100">
                             <figure class="news-square-img-container">
-                                <img src="/images/painting.jpg" class="news-square-img" alt="">
+                                <img src="images/painting.jpg" class="news-square-img" alt="">
                             </figure>
                             <div class="news-card-content">
                                 <div class="news-card-text">
@@ -640,7 +643,7 @@
                     <article class="col-12 col-md-6 col-lg-4">
                         <div class="news-card h-100">
                             <figure class="news-square-img-container">
-                                <img src="/images/painting.jpg" class="news-square-img" alt="">
+                                <img src="images/painting.jpg" class="news-square-img" alt="">
                             </figure>
                             <div class="news-card-content">
                                 <div class="news-card-text">
@@ -663,7 +666,7 @@
                     <article class="col-12 col-md-6 col-lg-4">
                         <div class="news-card h-100">
                             <figure class="news-square-img-container">
-                                <img src="/images/painting.jpg" class="news-square-img" alt="">
+                                <img src="images/painting.jpg" class="news-square-img" alt="">
                             </figure>
                             <div class="news-card-content">
                                 <div class="news-card-text">
@@ -736,7 +739,7 @@
                                 важной роли искусства в нашей жизни.</p>
                         </div>
                         <div class="art-card__image-right">
-                            <img src="/images/image.png" alt="Картина художника">
+                            <img src="images/image.png" alt="Картина художника">
                         </div>
                     </div>
                 </article>
@@ -744,7 +747,7 @@
                 <article class="art-card mb-5">
                     <div class="art-card__inner">
                         <div class="art-card__image-left">
-                            <img src="/images/image.png" alt="Картина художника">
+                            <img src="images/image.png" alt="Картина художника">
                         </div>
                         <div class="art-card__text text-start p-4">
                             <h3 class="fs-4 mb-3">Штаб-квартира в центре Европы — ваше окно в мир искусства</h3>
@@ -772,7 +775,7 @@
                                 только интерьер, но и душу, придавая вашей жизни больше красоты и смысла</p>
                         </div>
                         <div class="art-card__image-right">
-                            <img src="/images/image.png" alt="Картина художника">
+                            <img src="images/image.png" alt="Картина художника">
                         </div>
                     </div>
                 </article>
@@ -799,7 +802,7 @@
                 <article class="col-md-6 col-lg-4">
                     <div class="card p-4 text-center h-100">
                         <h3 class="fs-4 mb-3">Поддержка талантов</h3>
-                        <p class="small">Покупая у нас, вы поддерживаете современных российских художников, помогая им
+                        <p class="small">Покупая у нас, вы поддерживаете <a href="#" class="link-arrow">современных российских художников</a>, помогая им
                             развиваться и создавать новые шедевры.</p>
                     </div>
                 </article>
@@ -831,7 +834,7 @@
                 <article class="col-md-6 col-lg-4">
                     <div class="card why-choose-card-with-image h-100">
                         <div class="why-choose-image-container">
-                            <img src="/images/image.png" alt="" class="img-fluid">
+                            <img src="images/image.png" alt="" class="img-fluid">
                         </div>
                     </div>
                 </article>
@@ -853,7 +856,7 @@
                 <div class="col-md-6 ">
                     <div class="welcome-first-row-card h-100">
                         <div class="welcome-card-image-wrapper">
-                            <img src="/images/image.png" alt="Art Gallery" class="welcome-card-image">
+                            <img src="images/image.png" alt="Art Gallery" class="welcome-card-image">
                         </div>
                     </div>
                 </div>
@@ -874,7 +877,7 @@
                     </div>
                 </div>
 
-                
+
 
                 <div class="col-12">
                     <div class="card">
@@ -983,10 +986,42 @@
     <!-- Затемнение фона -->
     <div class="search-modal-backdrop"></div>
 
-
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="scripts/header.js" defer></script>
 <script src="scripts/slider-main.js" defer></script>
+<style>
+    .slider-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .slider-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .slider-content-info {
+        padding-left: 30px;
+        padding-right: 20px
+    }
+
+    @media (min-width: 1800.01px) {
+        .slider-content {
+            padding-left: 5rem;
+        }
+    }
+
+    @media (min-width: 1199px) {
+        .slider-content {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+</style>
 
 </html>
